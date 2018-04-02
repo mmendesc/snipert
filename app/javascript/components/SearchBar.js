@@ -6,14 +6,19 @@ class SearchBar extends React.Component {
     super(props)
 
     this.state = { text: ''};
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event){
+    this.setState({text: event.target.value})
   }
 
   render () {
     return (
       <div>
         <input
-        type="number"
-        onChange={(event) => this.onInputChange(event.target.value)}
+        type="text"
+        onChange={this.handleChange}
         />
         <h2> { this.state.text}</h2>
       </div>
