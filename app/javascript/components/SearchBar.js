@@ -1,5 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Logo from './Logo';
+
 class SearchBar extends React.Component {
 
   constructor(props){
@@ -16,6 +18,7 @@ class SearchBar extends React.Component {
   render () {
     return (
       <div className="container">
+        <Logo name="Snipert"/>
         <input
         type="text"
         className="form-control main-input"
