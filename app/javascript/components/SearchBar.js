@@ -15,9 +15,10 @@ class SearchBar extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="container">
         <input
         type="text"
+        className="form-control main-input"
         onChange={this.handleChange}
         />
         <h2> { this.state.text}</h2>
