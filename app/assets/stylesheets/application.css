@@ -12,5 +12,6 @@
  *
  *= require_tree .
  *= require bootstrap/dist/css/bootstrap.min.css
+ *= require react-mde/lib/styles/css/react-mde-all
  *= require_self
  */
