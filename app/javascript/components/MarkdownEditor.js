@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import ReactMde, { ReactMdeTypes } from "react-mde";
+import React from "react";
+import PropTypes from "prop-types";
+import ReactMde, {ReactMdeTypes}  from "react-mde";
 import * as Showdown from "showdown";
 import 'react-mde/lib/styles/css/react-mde-all.css';
 
@@ -29,15 +29,13 @@ class MarkdownEditor extends React.Component {
 
   render () {
     return (
-      <div className="container">
-        <ReactMde
-          onChange={this.handleValueChange}
-          editorState={this.state.mdeState}
-          generateMarkdownPreview={markdown =>
-            Promise.resolve(this.converter.makeHtml(markdown))
-          }
-        />
-      </div>
+      <ReactMde
+        onChange={this.handleValueChange}
+        editorState={this.state.mdeState}
+        generateMarkdownPreview={markdown =>
+          Promise.resolve(this.converter.makeHtml(markdown))
+        }
+      />
     );
   }
 }
